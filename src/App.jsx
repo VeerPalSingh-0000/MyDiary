@@ -82,7 +82,7 @@ export default function App() {
         content: entry.content || "",
         mood: entry.mood || "neutral",
         createdAt: serverTimestamp(),
-        date: entry.date ? new Date(entry.date).toLocaleDateString() : new Date().toLocaleDateString(),
+        date: entry.date || new Date().toISOString().split('T')[0],
         images: entry.images || [], 
         attachments: entry.attachments || [],
         isFavorite: entry.isFavorite || false,
