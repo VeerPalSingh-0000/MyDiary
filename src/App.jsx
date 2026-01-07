@@ -50,7 +50,7 @@ export default function App() {
     const q = query(
       collection(db, "entries"),
       where("uid", "==", user.uid),
-      orderBy("createdAt", "desc")
+      orderBy("date", "desc")
     );
 
     const unsubscribe = onSnapshot(q, (snapshot) => {
